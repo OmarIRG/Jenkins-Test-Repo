@@ -25,7 +25,7 @@ pipeline {
                 sh "whoami"
             }
         }
-        stage('Login to docker hub') {
+        stage('Login to docker hubb') {
             steps {
                 withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
                 sh 'echo ${dockerhubpwd} | docker login -u sanjeevkt720 --password-stdin'}
